@@ -21,7 +21,6 @@ type Skill interface {
 	GetOpponentSkillEffect() *skillEffect
 	GetName() string
 	GetType() Type
-	GetCopy() *skill
 	element.Element
 }
 
@@ -69,9 +68,4 @@ func (s *skill) SetPower(p float32) {
 
 func (s *skill) GetType() Type {
 	return s.skillType
-}
-
-func (s *skill) GetCopy() *skill {
-	cpy := *s
-	return &cpy
 }
